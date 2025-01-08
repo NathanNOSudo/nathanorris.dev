@@ -1,0 +1,128 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+   background-image: url(./images/bg-image.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.layer {
+ display: flex;
+ flex-direction:column;
+ justify-content: center;
+ align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+p.error2 {
+  font-size: 50px;
+    color: #fff;
+  font-family: 'Oswald', sans-serif;
+  /* border-top: solid ;
+  border-bottom: solid ; */
+}
+
+p.error3 {
+  font-size: 30px;
+    color: #fff;
+  font-family: 'Oswald', sans-serif;
+  /* border-top: solid ;
+  border-bottom: solid ; */
+}
+
+.error{
+  font-size: 200px;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  line-height: 260px;
+  border-top: solid ;
+  border-bottom: solid ;
+}
+
+/* Glowing text */
+.error, p.error2, p.error3 {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+button {
+  margin: 40px;
+}
+.custom-btn {
+  color: #fff;
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  font-weight: 700;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.custom-btn {
+  border: 1px solid #ff4da6;
+  box-shadow: 0 0 5px #ff4da6, 0 0 5px #ff4da6 inset;
+  color: #ff4da6;
+  background: #000;
+  z-index: 2;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.custom-btn1:after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: #ff4da6;
+  transition: all 0.3s ease;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.custom-btn1:hover {
+  color: #fff;
+}
+.custom-btn1:hover:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+/* BLINKING TEXT */
+
+/* .error{
+  animation: blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+  0%{ color: #fff; }
+  49%{ color: #fff; }
+  60%{ color: transparent; }
+  99%{ color: transparent; }
+  100%{ color: #fff; }
+} */
+
+p{
+  font-size: 22px;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+}
